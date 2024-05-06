@@ -82,12 +82,45 @@ app.get("/tasks",async(request,response)=>{
     response.send(dataAll)
 });
 
-app.put("/tasks/:tasksId",async(request,response)=>{
-      const {tasksId}=request.tasksId
-      
+app.put("/tasks/:tasksId/",async(request,response)=>{
+      const {tasksId}=request.params
+      const taskUpdateData=request.body
+      const{id,title,price,description,category,image,sold,dateOfSale}=taskUpdateData
+      const putData=`update transactions set 
+      id=${id},
+      title='${title}',
+      price=${price},
+      description='${description}',
+      category='${category}',
+      image='${image}',
+      sold=${sold},
+      dateOfSale=${dateOfSale}
+      where id=${tasksId};`;
 
 
+      await database.run(putData)
+      response.send("task updated Successfully")
 
 
+})
 
+
+app.delete("/tasks/:tasksId/",async(request,response)=>{
+  const {tasksId}=request.params
+  const deleteTask=`delete from transactions where id=${tasksId};`;
+  await database.run(deleteTask)
+  response.send("task deleted successfully")
+
+})
+
+
+app.post("/taskAdd",async(request,response)=>{
+  const addTask=request.body
+  const{id,title,price,description,category,image,sold,dateOfSale}=addTask
+  const addingTask=`insert into transactions (id,title,price,description,category,image,sold,dateOfSale)
+  values(${id},'${title}',${price},'${description}','${category}',
+  '${image}',${sold},'${dateOfSale}');`;
+
+  await database.run(addingTask)
+  response.send("Task added successfully")
 })
