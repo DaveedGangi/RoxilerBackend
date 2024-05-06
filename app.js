@@ -33,7 +33,7 @@ catch(e){
 inDataBase()
 
 
-app.post("/",(request,response)=>{
+app.post("/tasks",(request,response)=>{
 
     const fetchAndInsert = async () => {
       const response = await axios.get(
@@ -74,7 +74,7 @@ app.post("/",(request,response)=>{
 })
 
 
-app.get("/",async(request,response)=>{
+app.get("/tasks",async(request,response)=>{
 
     const dataFetchingFromDatabase=`
     select * from transactions`
@@ -82,4 +82,12 @@ app.get("/",async(request,response)=>{
     response.send(dataAll)
 });
 
+app.put("/tasks/:tasksId",async(request,response)=>{
+      const {tasksId}=request.tasksId
+      
 
+
+
+
+
+})

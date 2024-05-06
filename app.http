@@ -1,6 +1,8 @@
 
-GET http://localhost:3000/
+GET http://localhost:3000/tasks
 
+###
 
-POST http://localhost:3000/
+POST http://localhost:3000/tasks
 Content-Type: application/json
+
