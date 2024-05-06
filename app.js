@@ -33,15 +33,6 @@ catch(e){
 inDataBase()
 
 
-
-app.post("/",async(request,response)=>{
-   
-    const transactions =`
-    create table transactions (id int primary key, title text, price int, description text, category text, image text, sold boolean, dateOfSale datetime)`
-   let  dataSend=await database.run(transactions)
-    response.send(dataSend)
-})
-
 app.post("/",(request,response)=>{
 
     const fetchAndInsert = async () => {
