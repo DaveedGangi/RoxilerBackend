@@ -11,16 +11,6 @@ Content-Type: application/json
 POST http://localhost:3000/taskAdd
 Content-Type: application/json
 
-{
-    "id":61,
-    "title": "Sample Title",
-    "price": 99.99,
-    "description": "Sample Description",
-    "category": "Sample Category",
-    "image": "sample_image.jpg",
-    "sold": true,
-    "dateOfSale": "2024-05-06"
-  }
 
 
 
@@ -43,3 +33,29 @@ Content-Type: application/json
 ###
 
 DELETE http://localhost:3000/tasks/60/
+
+
+
+
+### Okay Goto Render Webiste Once
+### here you created app.js file but in deployment you wrote index.js
+
+### Go Deployement Once
+
+### Okay Are You clarified?
+
+### yes but why did we deleted node_modules folder
+
+### Some times its happen render will arrange them to our Project. Okay
+
+### Note you get error line Invalid ELF in that cases you can remove node_modules.
+
+### now i understood .
+
+### Hope Your query is cleared from our Side. All the best.
+
+### Yes!
+
+### Bye Daveed.
+
+### Okay byee
