@@ -6,6 +6,17 @@ GET http://localhost:3000/tasks
 POST http://localhost:3000/taskAdd
 Content-Type: application/json
 
+{
+    "id": 61,
+    "title": "Sample Title",
+    "price": 99.99,
+    "description": "Sample Description",
+    "category": "Sample Category",
+    "image": "sample_image.jpg",
+    "sold": true,
+    "dateOfSale": "2024-05-06"
+  }
+
 
 
 
@@ -27,7 +38,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/tasks/60/
+DELETE http://localhost:3000/tasks/61/
 Content-Type: application/json
 
 
