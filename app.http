@@ -38,7 +38,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/tasks/60/
+DELETE http://localhost:3000/taskDelete/60/
 Content-Type: application/json
 
 

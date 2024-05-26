@@ -105,7 +105,7 @@ app.put("/tasks/:tasksId/",async(request,response)=>{
 })
 
 
-app.delete("/tasks/:tasksId/",async(request,response)=>{
+app.delete("/taskDelete/:tasksId/",async(request,response)=>{
   const {tasksId}=request.params
   const deleteTask=`delete from transactions where id=${tasksId};`;
   await database.run(deleteTask)
